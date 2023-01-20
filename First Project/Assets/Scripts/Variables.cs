@@ -8,13 +8,23 @@ public class Variables : MonoBehaviour
 
     public int herosAge = 30;
 
-    public float herosHeight = 6.2;
+    public double herosHeight = 6.2;
+
+    public int herosLovers = 10;
 
     public double herosNetWorth = 100.45;
 
-    public char herosLetter = 'B';
+    public char herosFirstIn = 'B';
+
+    public char herosLastIn = 'W';
 
     public bool isHeroInv = false;
+
+    public bool isHeroRich = true;
+
+    private string herosIdentity = "Bruce Wayne";
+    
+
     
     // Start is called before the first frame update
     void Start()
