@@ -336,6 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 874171351}
   - component: {fileID: 874171350}
+  - component: {fileID: 874171352}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -350,12 +351,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874171349}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9a3b2983af0af94c84e75e0769f93ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   herosName: Batman
+  herosAge: 30
+  herosHeight: 6.2
+  herosLovers: 10
+  herosNetWorth: 100.45
+  herosFirstIn: 66
+  herosLastIn: 87
+  isHeroInv: 0
+  isHeroRich: 1
 --- !u!4 &874171351
 Transform:
   m_ObjectHideFlags: 0
@@ -370,6 +379,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874171352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874171349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6006164acfb43e942a2d901ebf4ac087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weather: cloudy
+  temperature: 30
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

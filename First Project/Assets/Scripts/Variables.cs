@@ -24,8 +24,6 @@ public class Variables : MonoBehaviour
 
     private string herosIdentity = "Bruce Wayne";
     
-
-    
     // Start is called before the first frame update
     void Start()
     {
