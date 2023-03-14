@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 25;
 
-    public float xRange = 30;
+    public float xRange = 25;
 
     public Transform blaster;
 
