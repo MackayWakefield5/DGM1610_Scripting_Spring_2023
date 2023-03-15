@@ -10,7 +10,7 @@ public class PlayerController2D : MonoBehaviour
     public float speed;
 
     // How high the player will jump
-    public float jumpforce;
+    public float jumpForce;
 
     // get move input value
     private float moveInput; 
@@ -38,8 +38,8 @@ public class PlayerController2D : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Get rigidbody component reference
-      rb = GetComponent<Ridgidbody2D>();  
+        // Get rigidbody component reference
+        rb = GetComponent<Rigidbody2D>();  
     }
 
     // Fixed update is called a fixed or set number of frames. This works best with physics based movement
@@ -49,10 +49,10 @@ public class PlayerController2D : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         // Get the horizontal Keybinding which will return a value between -1 and 1
-        moveInput = moveInput.GetAxis("Horizontal");
+        moveInput = Input.GetAxis("Horizontal");
 
         // Move player left and right
-        rb.velocity = new Vector2(moveInout * speed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
         // If the player is moving right but facing left flip the player right
         if(!isFacingRight && moveInput > 0)
@@ -88,18 +88,18 @@ public class PlayerController2D : MonoBehaviour
             doubleJump = true;
         }
 
-        if(moveInput.GetKeyDown(KeyCode.Space) && !doubleJump && isGrounded)
+        if(Input.GetKeyDown(KeyCode.Space) && doubleJump)
         {
             // Makes player jump
-            rb.velocity = Vector2.up * jumpforce;
+            rb.velocity = Vector2.up * jumpForce;
 
             doubleJump = false;
         }
 
-        else if(moveInput.GetKeyDown(KeyCode.Space) && !doubleJump && isFacingRightGrounded)
+        else if(Input.GetKeyDown(KeyCode.Space) && !doubleJump && isGrounded)
         {
             // Apply jumpForce to player making player jump
-            rb.velocity = vector2.up * jumpforce;
+            rb.velocity = Vector2.up * jumpForce;
         }
     }
 }
