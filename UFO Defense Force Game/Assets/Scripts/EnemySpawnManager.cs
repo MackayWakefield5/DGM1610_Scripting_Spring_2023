@@ -11,18 +11,19 @@ public class EnemySpawnManager : MonoBehaviour
 
     private float spawnPosZ = 20f;
 
+    private float startDelay = 2f;
+
+    private float spawnInterval = 1.5f;
+
     void Start()
     {
-         
+        InvokeRepeating("SpawnRandomUFO",startDelay,spawnInterval);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            SpawnRandomUFO();
-        }
+
     }
 
     void SpawnRandomUFO()
@@ -35,4 +36,5 @@ public class EnemySpawnManager : MonoBehaviour
         // Spawns indexed UFO from array, a random location on th X-Axis
         Instantiate(ufoPrefabs[ufoIndex],spawnPos,ufoPrefabs[ufoIndex].transform.rotation);
     }
+
 }
